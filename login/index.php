@@ -13,10 +13,31 @@
   <link rel="stylesheet" href="../public/templates/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../public/templates/AdminLTE-3.2.0/dist/css/adminlte.min.css">
+  
+  <!-- Librería SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
   <!-- /.login-logo -->
+
+
+  <?php
+  session_start();
+  if (isset($_SESSION['mensaje'])) {
+    $respuesta = $_SESSION['mensaje']; ?>
+    <script>
+      Swal.fire({
+  position: "top-end",
+  icon: "error",
+  title: "<?php echo $respuesta;?>",
+  showConfirmButton: false,
+  timer: 1500
+});
+    </script>
+  <?php
+  }
+  ?>
   <center>
     <img src="https://img.freepik.com/vector-gratis/analistas-demanda-dandose-mano-pantallas-portatiles-planificando-demanda-futura-planificacion-demanda-analisis-demanda-ilustracion-concepto-pronostico-ventas-digitales_335657-2098.jpg?w=740&t=st=1711981811~exp=1711982411~hmac=c61f024e88ae6db57372481e081e9c491fd3c5d7730da06d8a50a6c01848013c" 
     alt="" width="300px">
