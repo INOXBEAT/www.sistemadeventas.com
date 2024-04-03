@@ -1,10 +1,5 @@
 <?php
 
-
-
-
-
-
 define('SERVIDOR','localhost');
 define('USUARIO','root');
 define('PASSWORD','');
@@ -21,4 +16,7 @@ try{
 }
 
 $URL = "http://localhost/www.sistemadeventas.com";
+
+date_default_timezone_set("America/Bogota");
+$fecha_hora = date('Y-m-d H:i:s')
 ?>
