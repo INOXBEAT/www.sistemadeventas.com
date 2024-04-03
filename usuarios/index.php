@@ -28,7 +28,7 @@ include('../app/controllers/usuarios/listado_de_usuarios.php');
 
       <div class="row">
         <div class="col-md-8">
-          <div class="card card-primary">
+          <div class="card card-outline card-primary">
             <div class="card-header">
               <h3 class="card-title">Usuarios registrados</h3>
               <div class="card-tools">
@@ -59,8 +59,8 @@ include('../app/controllers/usuarios/listado_de_usuarios.php');
                 </tbody>
               </table>
             </div>
-
           </div>
+
         </div>
       </div>
 

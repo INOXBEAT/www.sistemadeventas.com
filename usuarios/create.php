@@ -22,7 +22,53 @@ include ('../layout/parte1.php');?>
     <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
-        Contenido del sistema
+      
+      <div class="row">
+        <div class="col-md-5">
+        <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Llene los datos con cuidado</h3>
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+
+            </div>
+
+            <div class="card-body" style="display: block;">
+              <div class="row">
+                <div class="col-md-12">
+                  <form action="../app/controllers/usuarios/create.php" method="post">
+                    <div class="form-group">
+                      <label for="">Nombres</label>
+                      <input type="text" class="form-control" placeholder="Escriba aquí el nombre del nuevo usuario">
+                    </div>
+                    <div class="form-group">
+                      <label for="">Email</label>
+                      <input type="email" class="form-control" placeholder="Escriba aquí el correo del nuevo usuario">
+                    </div>
+                    <div class="form-group">
+                      <label for="">Contraseña</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="">Repita la contraseña</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                      <a href="" class="btn btn-secondary">Cancelar</a>
+                      <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
         <!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
