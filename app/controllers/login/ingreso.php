@@ -1,5 +1,11 @@
 <?php
 
+
+
+
+
+
+
 include('../../config.php');
 
 $email = $_POST['email'];
@@ -9,7 +15,6 @@ $contador = 0;
 $sql = "SELECT * FROM tb_usuarios WHERE email = '$email' AND password_user = '$password_user'";
 $query = $pdo -> prepare($sql);
 $query -> execute();
-
 $usuarios = $query -> fetchAll(PDO::FETCH_ASSOC);
 foreach ($usuarios as $usuario) {
     $contador = $contador + 1;
@@ -21,7 +26,7 @@ if ($contador == 0) {
     echo "Datos incorrectos, vuelva a intentarlo";
     session_start();
     $_SESSION['mensaje'] = "Error datos incorrectos";
-    header('Location: '.$URL.'/login');
+    header('Location: '.$URL.'/login');    
 }else {
     echo "Datos correctos";
     session_start();

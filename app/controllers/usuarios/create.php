@@ -1,5 +1,11 @@
 <?php
 
+
+
+
+
+
+
 include('../../config.php');
 
 $nombres = $_POST['nombre'];
@@ -18,8 +24,14 @@ if ($password_user == $password_repeat) {
     $sentencia->bindParam('password_user', $password_user);
     $sentencia->bindParam('fyh_creacion', $fecha_hora);
     $sentencia->execute();
+    session_start();
+    $_SESSION['mensaje'] = "Se registró al usuario correctamente";
+    header('Location: '.$URL.'/usuarios/');
 } else {
-    echo "error las contraseñas no son iguales";
+    // echo "error las contraseñas no son iguales";
+    session_start();
+    $_SESSION['mensaje'] = "Error las contraseñas no son iguales";
+    header('Location: '.$URL.'/usuarios/create.php');
 }
 
 ?>
